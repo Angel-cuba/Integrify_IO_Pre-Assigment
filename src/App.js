@@ -1,19 +1,12 @@
-import { useEffect, useState } from 'react';
-import { allUsers } from './api/ApiRequest';
-import { useStyles } from './styles';
+import { Route, Routes } from 'react-router-dom';
+import Details from './components/CardDetails/Details';
+import HomeScreen from './components/HomeScreen';
 function App() {
-	const [users, setUsers] = useState();
-	console.log(users);
-	const styles = useStyles();
-	useEffect(() => {
-		allUsers()
-			.then((res) => res.json())
-			.then((data) => setUsers(data));
-	}, []);
 	return (
-		<div className={styles.text}>
-			<h1>Hola desde el principal</h1>
-		</div>
+		<Routes>
+			<Route path="" element={<HomeScreen />} />
+			<Route path="/:id" element={<Details />} />
+		</Routes>
 	);
 }
 
