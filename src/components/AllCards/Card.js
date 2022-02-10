@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { userById } from '../../api/ApiRequest';
 import Details from '../CardDetails/Details';
 import { useStyles } from './stylesCard';

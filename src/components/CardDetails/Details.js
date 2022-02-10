@@ -1,11 +1,13 @@
-import React from 'react';
+import { useParams } from 'react-router-dom';
 
 const Details = ({ userId }) => {
 	console.log(userId);
+	const params = useParams();
+
 	return (
-		<div>
-			<h1>Aqui está la card_details</h1>
-		</div>
+		<>
+			<h1>Aqui está la card_details {params.id}</h1>
+		</>
 	);
 };
 
