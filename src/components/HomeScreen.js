@@ -5,7 +5,6 @@ import Card from './AllCards/Card';
 
 const HomeScreen = () => {
 	const [users, setUsers] = useState();
-	console.log(users);
 	const styles = useStyles();
 	useEffect(() => {
 		allUsers()
@@ -13,8 +12,7 @@ const HomeScreen = () => {
 			.then((data) => setUsers(data));
 	}, []);
 	return (
-		<div className={styles.text}>
-			<h1>Hola desde el principal</h1>
+		<div className={styles.home}>
 			<Card users={users} />
 		</div>
 	);
